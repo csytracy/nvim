@@ -49,6 +49,11 @@ if !exists('g:airline_symbols')
 endif
 
 set relativenumber
+set path+=**
 tnoremap <Esc> <C-\><C-n>
+"" Tab nav
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
+"" Buffer nav
+nnoremap <silent> <F12> :bn<CR>
+nnoremap <silent> <S-F12> :bp<CR>
