@@ -50,10 +50,11 @@ endif
 
 set relativenumber
 set path+=**
+set hidden
 tnoremap <Esc> <C-\><C-n>
 "" Tab nav
-nnoremap <Tab> gt
-nnoremap <S-Tab> gT
+nnoremap <Tab> :bn<CR>
+nnoremap <S-Tab> :bp<CR>
 "" Buffer nav
-nnoremap <silent> <F12> :bn<CR>
-nnoremap <silent> <S-F12> :bp<CR>
+nnoremap <silent> <F12> gt
+nnoremap <silent> <S-F12> gT
