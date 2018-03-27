@@ -52,9 +52,7 @@ endif
 set relativenumber
 set path+=**
 set hidden
-if !exists('g:not_finish_vimplug')
-  colorscheme molokai
-endif
+colorscheme molokai
 
 tnoremap <Esc> <C-\><C-n>
 "" Tab nav
