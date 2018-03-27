@@ -31,6 +31,7 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 "*****************************************************************************
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tomasr/molokai'
 call plug#end()
 
 " Required:
@@ -51,6 +52,10 @@ endif
 set relativenumber
 set path+=**
 set hidden
+if !exists('g:not_finish_vimplug')
+  colorscheme molokai
+endif
+
 tnoremap <Esc> <C-\><C-n>
 "" Tab nav
 nnoremap <Tab> :bn<CR>
