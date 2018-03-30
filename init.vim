@@ -7,9 +7,6 @@ endif
 
 let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 
-let g:vim_bootstrap_langs = ""
-let g:vim_bootstrap_editor = "nvim"				" nvim or vim
-
 if !filereadable(vimplug_exists)
   if !executable("curl")
     echoerr "You have to install curl or first install vim-plug yourself!"
@@ -52,7 +49,9 @@ endif
 set relativenumber
 set path+=**
 set hidden
-colorscheme molokai
+if !exists('g:not_finish_vimplug')
+  colorscheme molokai
+endif
 
 tnoremap <Esc> <C-\><C-n>
 "" Tab nav
@@ -61,3 +60,11 @@ nnoremap <S-Tab> :bp<CR>
 "" Buffer nav
 nnoremap <silent> <F12> gt
 nnoremap <silent> <S-F12> gT
+
+" vim-python
+augroup vimrc-python
+  autocmd!
+  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
+      \ formatoptions+=croq softtabstop=4
+      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+augroup END
