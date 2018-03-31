@@ -29,6 +29,15 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+Plug 'zchee/deoplete-jedi'
 call plug#end()
 
 " Required:
@@ -41,7 +50,6 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
-" vim-airline
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
@@ -53,14 +61,6 @@ if !exists('g:not_finish_vimplug')
   colorscheme molokai
 endif
 
-tnoremap <Esc> <C-\><C-n>
-"" Tab nav
-nnoremap <Tab> :bn<CR>
-nnoremap <S-Tab> :bp<CR>
-"" Buffer nav
-nnoremap <silent> <F12> gt
-nnoremap <silent> <S-F12> gT
-
 " vim-python
 augroup vimrc-python
   autocmd!
@@ -68,3 +68,11 @@ augroup vimrc-python
       \ formatoptions+=croq softtabstop=4
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
+
+tnoremap <Esc> <C-\><C-n>
+"" Tab nav
+nnoremap <Tab> :bn<CR>
+nnoremap <S-Tab> :bp<CR>
+"" Buffer nav
+nnoremap <silent> <F12> gt
+nnoremap <silent> <S-F12> gT
