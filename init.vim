@@ -15,7 +15,6 @@ if !filereadable(vimplug_exists)
   echo "Installing Vim-Plug..."
   echo ""
   silent !\curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  let g:not_finish_vimplug = "yes"
 
   autocmd VimEnter * PlugInstall
 endif
@@ -43,6 +42,10 @@ call plug#end()
 " Required:
 filetype plugin indent on
 
+" deoplete
+let g:not_finish_vimplug = "yes"
+set completeopt-=preview
+
 " vim-airline
 let g:airline_theme = 'powerlineish'
 let g:airline#extensions#syntastic#enabled = 1
@@ -57,9 +60,6 @@ endif
 set relativenumber
 set path+=**
 set hidden
-if !exists('g:not_finish_vimplug')
-  colorscheme molokai
-endif
 
 " vim-python
 augroup vimrc-python
@@ -76,3 +76,7 @@ nnoremap <S-Tab> :bp<CR>
 "" Buffer nav
 nnoremap <silent> <F12> gt
 nnoremap <silent> <S-F12> gT
+
+if !exists('g:not_finish_vimplug')
+  colorscheme molokai
+endif
