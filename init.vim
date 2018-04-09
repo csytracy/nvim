@@ -15,7 +15,7 @@ if !filereadable(vimplug_exists)
   echo "Installing Vim-Plug..."
   echo ""
   silent !\curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
+  let g:not_finish_vimplug = "yes"
   autocmd VimEnter * PlugInstall
 endif
 
@@ -35,7 +35,6 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-let g:deoplete#enable_at_startup = 1
 Plug 'zchee/deoplete-jedi'
 call plug#end()
 
@@ -43,7 +42,7 @@ call plug#end()
 filetype plugin indent on
 
 " deoplete
-let g:not_finish_vimplug = "yes"
+let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
 
 " vim-airline
