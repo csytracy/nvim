@@ -44,6 +44,8 @@ filetype plugin indent on
 " deoplete
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " vim-airline
 let g:airline_theme = 'powerlineish'
