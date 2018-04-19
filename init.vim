@@ -27,7 +27,6 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 "*****************************************************************************
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tomasr/molokai'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -91,7 +90,3 @@ nnoremap <S-Tab> :bp<CR>
 "" Tab nav
 nnoremap <silent> <F12> gt
 nnoremap <silent> <S-F12> gT
-
-if !exists('g:not_finish_vimplug')
-  colorscheme molokai
-endif
