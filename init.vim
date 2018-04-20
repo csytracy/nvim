@@ -72,6 +72,10 @@ nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 set relativenumber
 set number
+set ignorecase
+set smartcase
+set bg=dark
+set mouse=a
 set path+=**
 set hidden
 
