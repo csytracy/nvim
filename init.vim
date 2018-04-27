@@ -74,7 +74,7 @@ set relativenumber
 set number
 set ignorecase
 set smartcase
-set bg=dark
+set background=dark
 set mouse=nv
 set path+=**
 set hidden
