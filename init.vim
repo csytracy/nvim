@@ -75,7 +75,7 @@ set number
 set ignorecase
 set smartcase
 set bg=dark
-set mouse=a
+set mouse=nv
 set path+=**
 set hidden
 
