@@ -78,6 +78,7 @@ set background=dark
 set mouse=nv
 set path+=**
 set hidden
+set list
 
 " vim-python
 augroup vimrc-python
