@@ -88,7 +88,7 @@ augroup vimrc-python
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
-tnoremap <Esc> <C-\><C-n>
+tnoremap <Esc><Esc> <C-\><C-n>
 "" Buffer nav
 nnoremap <Tab> :bn<CR>
 nnoremap <S-Tab> :bp<CR>
