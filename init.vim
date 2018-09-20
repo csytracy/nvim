@@ -27,14 +27,14 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 "*****************************************************************************
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Javascript
+Plug 'wokalski/autocomplete-flow'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+" Python
 Plug 'zchee/deoplete-jedi'
+" Nerdtree
 Plug 'scrooloose/nerdtree'
 call plug#end()
 
@@ -46,6 +46,9 @@ let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" neosnippet
+let g:neosnippet#enable_completed_snippet = 1
 
 " vim-airline
 let g:airline_theme = 'powerlineish'
@@ -79,6 +82,9 @@ set mouse=nv
 set path+=**
 set hidden
 set list
+
+"" System clipboard to "+
+set clipboard=unnamed
 
 "" Tabs. May be overriten by autocmd rules
 set tabstop=4
