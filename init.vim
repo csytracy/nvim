@@ -127,5 +127,5 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "" tag-highlight
-map <F10>  :sp tags<CR>:%s/^\([^	:]*:\)\=\([^	]*\).*/syntax keyword Tag \2/<CR>:wq! tags.vim<CR><F12>
+map <F9>  :sp tags<CR>:%s/^\([^	:]*:\)\=\([^	]*\).*/syntax keyword Tag \2/<CR>:wq! tags.vim<CR><F12>
 map <F12>  :so tags.vim<CR>
