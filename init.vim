@@ -111,9 +111,21 @@ augroup vimrc-python
 augroup END
 
 tnoremap <Esc><Esc> <C-\><C-n>
+
 "" Buffer nav
 nnoremap <Tab> :bn<CR>
 nnoremap <S-Tab> :bp<CR>
+
+"" Tab nav
+"nnoremap <Tab> gt
+"nnoremap <S-Tab> gT
+
+"" Splits nav
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 "" tag-highlight
 map <F10>  :sp tags<CR>:%s/^\([^	:]*:\)\=\([^	]*\).*/syntax keyword Tag \2/<CR>:wq! tags.vim<CR><F12>
 map <F12>  :so tags.vim<CR>
