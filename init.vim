@@ -34,8 +34,6 @@ Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 " Python
 Plug 'zchee/deoplete-jedi'
-" Nerdtree
-Plug 'scrooloose/nerdtree'
 call plug#end()
 
 " Required:
@@ -51,27 +49,19 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 let g:neosnippet#enable_completed_snippet = 1
 
 " vim-airline
-let g:airline_theme = 'powerlineish'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline_skip_empty_sections = 1
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
 
-"" NERDTree configuration
-let g:NERDTreeChDirMode=2
-let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
-let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
-let g:NERDTreeShowBookmarks=1
-let g:nerdtree_tabs_focus_on_files=1
-let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 25
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
-nnoremap <silent> <F2> :NERDTreeFind<CR>
-nnoremap <silent> <F3> :NERDTreeToggle<CR>
+" netrw
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 20
+let g:netrw_list_hide = '.*\.swp$,.*\.pyc'
+nnoremap <silent> <F2> :Vexplore<CR>
 
 set relativenumber
 set number
