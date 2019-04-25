@@ -106,6 +106,12 @@ tnoremap <Esc><Esc> <C-\><C-n>
 nnoremap <Tab> :bn<CR>
 nnoremap <S-Tab> :bp<CR>
 
+"" change yank/paste register
+nnoremap y "+y
+vnoremap y "+y
+nnoremap p "+p
+nnoremap P "+P
+
 "" Tab nav
 "nnoremap <Tab> gt
 "nnoremap <S-Tab> gT
@@ -116,6 +122,3 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-"" tag-highlight
-map <F9>  :sp tags<CR>:%s/^\([^	:]*:\)\=\([^	]*\).*/syntax keyword Tag \2/<CR>:wq! tags.vim<CR><F12>
-map <F12>  :so tags.vim<CR>
