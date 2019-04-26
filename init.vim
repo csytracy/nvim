@@ -106,12 +106,6 @@ tnoremap <Esc><Esc> <C-\><C-n>
 nnoremap <Tab> :bn<CR>
 nnoremap <S-Tab> :bp<CR>
 
-"" change yank/paste register
-nnoremap y "+y
-vnoremap y "+y
-nnoremap p "+p
-nnoremap P "+P
-
 "" Tab nav
 "nnoremap <Tab> gt
 "nnoremap <S-Tab> gT
