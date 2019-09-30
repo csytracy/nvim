@@ -63,7 +63,6 @@ let g:netrw_winsize = 20
 let g:netrw_list_hide = '.*\.swp$,.*\.pyc'
 nnoremap <silent> <F2> :Vexplore<CR>
 
-set relativenumber
 set number
 set ignorecase
 set smartcase
