@@ -93,6 +93,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" fix color in floating window under dark themes
+hi CocFloating ctermbg=8
+
 " if hidden is not set, TextEdit might fail.
 set hidden
 
